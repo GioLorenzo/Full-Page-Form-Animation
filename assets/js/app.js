@@ -23,4 +23,14 @@
       nextSlide(parent, nextForm);
     } else if (input.type === 'email' && validateEmail(input)) {
       nextSlide(parent, nextForm);
-    
+    } else if (input.type === 'password' && isSixCharacters(input)) {
+      nextSlide(parent, nextForm);
+    }
+  }  
+
+  const isSixCharacters = user => {
+    if (user.value.length < 6) {
+      console.log('not enough characters');
+      colorChange(red);
+     
+    } els
