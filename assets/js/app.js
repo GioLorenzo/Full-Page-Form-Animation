@@ -86,7 +86,11 @@
     parent.classList.remove('active');
     nextForm.classList.add('active');
     nextForm.classList.remove('innactive');
-    let ne
+    let nextInput = nextForm.querySelector('.input');
+    if (nextInput) {
+      nextInput.focus();
+    }
+  }
 
   (animateFormIIFE = () => {
     const arrows = document.querySelectorAll('.fa-arrow-down');
