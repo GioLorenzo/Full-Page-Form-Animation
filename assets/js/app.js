@@ -16,7 +16,7 @@
     } else if (input.type === 'email' && validateEmail(input)) {
       nextSlide(parent, nextForm);
     } else if (input.type === 'password' && validatePassword(input)) {
-     
+      nextSlide(parent, nextForm);
     } else {
       if (input.type === 'text') {
         input.value = '';
