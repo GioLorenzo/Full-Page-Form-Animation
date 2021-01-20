@@ -49,3 +49,25 @@
     } else {
       colorChange(red);
       
+    }
+  }
+
+
+  const colorChange = color => {
+    global.body.style.backgroundColor = color;
+    setTimeout(function changeBack() {
+      global.body.style.backgroundColor = pink;
+    }, 600);
+  }
+
+  function nextSlide(parent, nextForm) {
+    parent.classList.add('innactive');
+    parent.classList.remove('active');
+    nextForm.classList.add('active');
+    nextForm.classList.remove('innactive');
+  }
+    
+
+
+
+})(document);
