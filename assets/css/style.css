@@ -12,7 +12,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: pink;
+  background:rgb(255, 225, 234);
   transition: background 0.5s ease;
   position: relative;
 }
@@ -56,6 +56,22 @@ body {
   outline: none;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill {
+   -webkit-box-shadow: 0 0 0px 1000px white inset!important;
+   box-shadow: 0 0 0px 1000px white inset!important;
+}
+
+.password-reqs {
+  position: absolute;
+  width: 85%;
+  top: 100%;
+  margin: 10% 0 0 9.5%;
+  font-size: 14px;
+}
+
 div.innactive {
   opacity: 0;
   pointer-events: none;
@@ -66,5 +82,21 @@ div.active {
   opacity: 1;
   pointer-events: all;
   transform: translate(-50%, -50%);
+}
+
+::selection{
+  background: rgb(207, 252, 255);
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(10deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
 }
 

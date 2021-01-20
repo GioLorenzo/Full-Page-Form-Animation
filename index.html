@@ -14,22 +14,26 @@
 <form>
     <div class="field-name active">
         <i class="fas fa-user-astronaut fa-2x"></i>
-        <input type="text" placeholder="Username" required>
+        <input spellcheck="false" class="input" type="text" placeholder="Username" required>
         <i class="fas fa-arrow-down click-me"></i>
     </div>
     <div class="field-email innactive">
         <i class="fas fa-envelope"></i>
-        <input type="email" placeholder="Email" required>
+        <input spellcheck="false" class="email input" type="email" placeholder="Email" required>
         <i class="fas fa-arrow-down click-me"></i>
     </div>
     <div class="field-password innactive">
         <i class="fas fa-key"></i>
-        <input type="password" placeholder="Password" required>
+        <input spellcheck="false" class="input" type="password" placeholder="Password" required>
         <i class="fas fa-arrow-down click-me"></i>
+        <ul class="password-reqs">
+            <li>Password must be longer than 6 characters.</li>
+            <li>Must contain at least one number, one lowercase, and one uppercase letter.</li>
+        </ul>
     </div>
     <div class="field-finish innactive">
         <i class="fas fa-heart"></i>
-        <p>Thank You!</p>
+        <p class="thank-you">Thank You!</p>
         <i class="fas fa-heart"></i>
     </div>
 </form>
