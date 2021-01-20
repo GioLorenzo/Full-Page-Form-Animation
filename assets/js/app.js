@@ -37,6 +37,15 @@
     }
   }  
 
+  const validatePassword = password => {
+    var re = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+    if (re.test(password.value)) {
+      colorChange(green);
+      return true;
+    } else {
+      console.log(password.value);
+      colorChange(red);
+    }
   }
 
   const isSixCharacters = user => {
