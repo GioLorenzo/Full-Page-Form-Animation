@@ -33,4 +33,19 @@
       console.log('not enough characters');
       colorChange(red);
      
-    } els
+    } else {
+      colorChange(green);
+      
+      return true;
+    };
+  };
+
+  const validateEmail = email => {
+    const validation =  /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (validation.test(email.value)) {
+      colorChange(green);
+      
+      return true;
+    } else {
+      colorChange(red);
+      
