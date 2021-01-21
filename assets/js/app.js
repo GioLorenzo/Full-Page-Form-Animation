@@ -5,6 +5,18 @@
   const red = 'rgb(189, 87, 87)';
   const pink = 'rgb(255, 225, 234)';
 
+  (function loadInIIFE() {
+    let active = global.querySelector('.fade-out');
+    window.addEventListener('load', () => {
+      active.classList.remove('fade-out');
+      active.classList.add('fade-in');
+    })
+  })();
+  
+  
+  
+  
+  
   function validation(arrow) {
     const input = arrow.previousElementSibling;
     const parent = arrow.parentElement;
@@ -61,11 +73,9 @@
     const validation =  /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (validation.test(email.value)) {
       colorChange(green);
-      
       return true;
     } else {
       colorChange(red);
-      
     }
   }
 
