@@ -7,10 +7,15 @@
 
   (function loadInIIFE() {
     let active = global.querySelector('.fade-out');
+    let spinnerWrapper = document.querySelector('.spinner-wrapper');
+
     window.addEventListener('load', () => {
-      active.classList.remove('fade-out');
-      active.classList.add('fade-in');
-    })
+      setTimeout(() => {
+        spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+        active.classList.remove('fade-out');
+        active.classList.add('fade-in');
+      }, 600);
+    });
   })();
   
   
@@ -83,7 +88,7 @@
     global.body.style.backgroundColor = color;
     setTimeout(function changeBack() {
       global.body.style.backgroundColor = pink;
-    }, 600);
+    }, 800);
   }
 
   const shakeAnimation = (parent) => {
