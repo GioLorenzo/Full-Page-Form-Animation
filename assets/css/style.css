@@ -32,31 +32,39 @@ body {
 
 .spinner {
     position: relative;
-    width: 2.1rem;
-    height: 2.1rem;
-    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
 }
 
-.spinner::before,
+.spinner:before,
 .spinner:after{
     content: "";
     position: absolute;
-    border-radius: 50%;
 }
 
 .spinner:before {
-    width: 100%;
-    height: 100%;
-    background-image:linear-gradient(90deg, rgb(255, 225, 234) 0%,white 100% );
-    animation: spin .5s infinite linear;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(
+      to right, 
+      hsl(342, 100%, 90%),
+      hsl(342, 100%, 90%) 50%,
+      hsl(342, 10%, 40%) 50%,
+      hsl(342, 10%, 40%) 100%
+    );
+  background-repeat: no-repeat;
+  animation: spin .5s infinite linear;
 }
 .spinner:after {
-    width: 80%;
-    height: 80%;
+    width: 93%;
+    height: 93%;
     background-color: rgb(255, 225, 234);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 50%;
 }
 
 @keyframes spin {
@@ -108,6 +116,7 @@ body {
 .field-name input,
 .field-email input,
 .field-password input {
+  color: rgb(138, 106, 116);
   background: none;
   border: none;
   flex: 1;
@@ -119,8 +128,8 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus
 input:-webkit-autofill {
-   -webkit-box-shadow: 0 0 0px 1000px white inset!important;
-   box-shadow: 0 0 0px 1000px white inset!important;
+  -webkit-box-shadow: 0 0 0px 1000px white inset!important;
+  box-shadow: 0 0 0px 1000px white inset!important;
 }
 
 .password-reqs {
@@ -173,6 +182,10 @@ div.active {
 
 ::selection{
   background: rgb(207, 252, 255);
+}
+
+input::placeholder {
+  color: ;
 }
 
 @keyframes shake {
